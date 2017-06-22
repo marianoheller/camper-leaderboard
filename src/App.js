@@ -98,37 +98,29 @@ export class App extends Component {
 
     return (
     <div className="container">
-      <div className="row">
-        <div className="twelve columns">
-          <h1>{this.props.title}</h1>
-        </div>
+      <div className="header">
+        <h1>{this.props.title}</h1>
+        <button onClick={this.props.onToggleShowing} className="toggleButton button-primary">{"Show "+this.props.toShowName}</button>
       </div>
       
-      <div className="row">
-        <div className="twelve columns">
-          <button onClick={this.props.onToggleShowing}>{"Show "+this.props.toShowName}</button>
-        </div>
-      </div>
-      
-
-      <div className="row">
-        <div className="two columns"></div>
-        <div className="ten columns">
-          <table>
-            <thead>
-              <tr>
-                <th>#</th>
-                <th>Camper Name</th>
-                <th>Recent points</th>
-                <th>All time points</th>
-              </tr>
-            </thead>
-            <tbody>
-              {campers}
-            </tbody>
-          </table>
-        </div>
-        <div className="two columns"></div>
+    
+      <div className="content">
+        <table className="u-full-width">
+          <thead>
+            <tr>
+              <th colSpan={4} className="showing-info">Showing {this.props.showing}</th>
+            </tr>
+            <tr>
+              <th>#</th>
+              <th>Camper Name</th>
+              <th>Recent points</th>
+              <th>All time points</th>
+            </tr>
+          </thead>
+          <tbody>
+            {campers}
+          </tbody>
+        </table>
       </div>
 
     </div>

@@ -4,6 +4,20 @@ body {
   font-family: sans-serif;
 }
 
+.header {
+  text-align: center;
+  margin-top: 10rem;
+  margin-bottom: 5rem;
+}
+
+.showing-info {
+  text-align: center;
+  font-weight: normal;
+}
+
+.content {
+  text-align: center;
+}
 
 .camper-logo {
   width: 30px;
